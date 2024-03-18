@@ -155,8 +155,8 @@
 
                                                         <label>Доступ<br>
                                                             <select name="roles" th:multiple="true">
-                                                                <option selected th:id="user" name="roles" th:value="2" th:text="USER">
-                                                                <option th:id="admin" name="roles" th:value="1" th:text="AMIN">
+                                                                <option th:selected="${user.getRoles().contains(roleUser)}" th:id="user" name="roles" th:value="2" th:text="USER">
+                                                                <option th:selected="${user.getRoles().contains(roleAdmin)}" th:id="admin" name="roles" th:value="1" th:text="AMIN">
 
                                                                 </option>
                                                             </select>

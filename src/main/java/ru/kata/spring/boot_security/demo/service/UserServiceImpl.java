@@ -44,6 +44,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public void updateUserById(User user) {
         User userFromDB = userRepository.findByUsername(user.getUsername());
         String pwd = userFromDB.getPassword();
+
         userRepository.save(user);
         if (user.getPassword() == "") {
             user.setPassword(pwd);
